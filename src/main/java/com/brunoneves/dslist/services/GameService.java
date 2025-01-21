@@ -19,9 +19,7 @@ public class GameService{
         List<Game> games = gameRepository.findAll();
 
         List<GameMinDTO> gamesDto = new ArrayList<>();
-
         games.forEach( game -> gamesDto.add(new GameMinDTO(game)));
-
         return gamesDto;
     }
 }
