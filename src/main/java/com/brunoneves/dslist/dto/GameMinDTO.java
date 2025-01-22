@@ -1,6 +1,7 @@
 package com.brunoneves.dslist.dto;
 
 import com.brunoneves.dslist.entities.Game;
+import com.brunoneves.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -19,6 +20,14 @@ public class GameMinDTO {
         year = entity.getYear();
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
+    }
+
+    public GameMinDTO(GameMinProjection gameProjection) {
+        id = gameProjection.getId();
+        title = gameProjection.getTitle();
+        year = gameProjection.getYear();
+        imgUrl = gameProjection.getImgUrl();
+        shortDescription = gameProjection.getShortDescription();
     }
 
     public Long getId() {
